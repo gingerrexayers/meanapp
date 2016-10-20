@@ -1,0 +1,9 @@
+<header><nav><a href='#/dashboard'>Home</a> | <a href='#/question/{{question._id}}/new_answer'>Answer this Question</a><a href='/logout'>logout</a></nav></header>
+<h1>{{question.text}}</h1>
+<p>{{question.description}}</p>
+<div ng-repeat='answer in question.answers'>
+  <p>{{answer.author.name}}:</p>
+  <p>{{answer.text}}</p>
+  <p>{{answer.details}}</p>
+  <p>Likes: {{answer.likes.length}} <a href ng-click='like(answer._id)'>Like this</a></p>
+</div>

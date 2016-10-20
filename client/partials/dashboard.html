@@ -1,0 +1,14 @@
+<header><h1>Hi, {{user.name}}!</h1><nav><a href='#/new_question'>Add a question</a><a href='/logout'>logout</a></nav></header>
+Search: <input type='text' />
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Answers</th>
+    <th>Action</th>
+  </tr>
+  <tr ng-repeat='question in questions'>
+    <td>{{question.text}}</td>
+    <td>{{question.answers.length}}</td>
+    <td><a href='#/question/{{question._id}}'>Show</a></td>
+  </tr>
+</table>
