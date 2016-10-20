@@ -24,7 +24,8 @@
         $scope.form.author = $scope.currUser;
         questionFactory.addAnswer($routeParams.id, $scope.form, function(data){
           console.log(data);
-          $location.url('/questions/' + $routeParams.id);
+          console.log('/questions/' + $routeParams.id);
+          $location.path('/question/' + $routeParams.id);
         });
       }
     }
